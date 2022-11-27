@@ -9,9 +9,7 @@ data class Pokemon(
     @SerializedName("types")
     val types: List<PokeType>,
     @SerializedName("stats")
-    val stats: List<PokeStatus>,
+    val stats: List<PokeStats>,
     @SerializedName("abilities")
-    val abilities: List<PokemonSpecialAttack>,
-    @SerializedName("moves")
-    val moves: List<PokeMoves>
+    val abilities: List<PokeAbilities>
 )

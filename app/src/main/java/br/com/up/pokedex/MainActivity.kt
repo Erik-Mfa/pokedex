@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         recyclerView.adapter = PokeAdapter(filteredList)
                         { pokemon ->
-                            callPokemonDetail(pokemon)
+                            callPokemonDetails(pokemon)
                         }
                     }
                 }
@@ -52,12 +52,12 @@ class MainActivity : AppCompatActivity() {
             pokemonList = pokemons
             recyclerView.adapter = PokeAdapter(pokemons!!)
             { pokemon ->
-                callPokemonDetail(pokemon)
+                callPokemonDetails(pokemon)
             }
         }
     }
 
-    fun callPokemonDetail(pokemon: Pokemon){
+    fun callPokemonDetails(pokemon: Pokemon){
         val intent = Intent(this, PokemonDetailsActivity::class.java)
         intent.putExtra("pokemonUrl", pokemon.url)
         startActivity(intent)
